@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  /* Royal Blue + White theme, govt-formal, high readability */
+  --background: 0 0% 100%;
+  --foreground: 222 47% 14%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 14%;
+
+  --primary: 224 76% 33%;          /* Royal blue */
+  --primary-foreground: 0 0% 100%;
+  
+
+  --secondary: 217 91% 96%;        /* Bahut halka blue background */
+  --secondary-foreground: 224 76% 25%;
+
+  --muted: 220 20% 96%;
+  --muted-foreground: 220 10% 40%;
+
+  --accent: 45 93% 47%;            /* Gold/amber accents (VIP, highlights) */
+  --accent-foreground: 222 47% 14%;
+
+  --destructive: 0 72% 45%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 220 15% 85%;
+  --border-strong: 224 40% 70%;
+  --input: 220 15% 82%;
+  --ring: 224 76% 40%;
+
+  --radius: 1rem;
+
+  --font-size-base: 17px; 
+  /* Sabhi card-jaisi cheezon me thoda zyada internal padding ka feel */
+.rounded-3xl { border-radius: 1.5rem; }
+.rounded-2xl { border-radius: 1.25rem; }         /* default se bada, age-friendly */
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Sab headings bade aur bold, saaf padhne layak */
+h1 { font-size: 1.85rem; font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 1.4rem; font-weight: 600; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+
+/* Buttons/inputs already bade the, ab aur thoda bada aur touch-friendly */
+button, input, select, textarea {
+  font-size: 1rem;
+}
+
+/* Royal blue ke saath shadcn variables map */
+.bg-primary { background-color: hsl(var(--primary)) !important; }
+.text-primary { color: hsl(var(--primary)) !important; }
+.text-primary-foreground { color: hsl(var(--primary-foreground)) !important; }
+.border-primary { border-color: hsl(var(--primary)) !important; }
+
+::selection {
+  background-color: hsl(var(--primary) / 0.18);
+}
+
+/* Print rules already page-level classes me hain, yahan chhedna nahi */
